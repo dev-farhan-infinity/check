@@ -31,7 +31,7 @@ import { PhoneInput } from "react-contact-number-input";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { AuthApi } from "../helpers/api/AuthApi";
-import GoggleWithLogin from "./GoggleWithLogin";
+// import GoggleWithLogin from "./GoggleWithLogin";
 
 export const profileDetailsValidationSchema = yup.object({
   email: yup
@@ -287,12 +287,6 @@ const Register = () => {
                 <span>Sign in instead</span>
               </Link>
             </p>
-            <div className="divider my-1">
-              <div className="divider-text">or</div>
-              <div className="auth-footer-btn d-flex justify-content-center">
-                <GoggleWithLogin buttonText="Sign up with Google" />
-              </div>
-            </div>
           </div>
         </Col>
       </Card>
