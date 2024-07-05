@@ -89,14 +89,14 @@ export default () => {
     build: {
       chunkSizeWarningLimit: 100,
       rollupOptions: {
-        plugins: [rollupNodePolyFill()]
+        onwarn(warning, warn) {
+          if (warning.code === "MODULE_LEVEL_DIRECTIVE") {
+            return;
+          }
+          warn(warning);
+        },
       },
-      onwarn(warning, warn) {
-        if (warning.code === "MODULE_LEVEL_DIRECTIVE") {
-          return;
-        }
-        warn(warning);
-      },
+      
       external: [            
         'node:path',           
         'node:https',
