@@ -90,8 +90,12 @@ export default () => {
       rollupOptions: {
         plugins: [rollupNodePolyFill()]
       },
-      external: [
-        /^node:.*/,
+      external: [            
+        'node:path',           
+        'node:https',
+        'node:http',
+        'node:zlib',
+        'node:*'
       ],
       minify: false,
     }
