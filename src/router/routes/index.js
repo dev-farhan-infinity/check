@@ -1,5 +1,6 @@
 // ** React Imports
 
+"use client"
 import { Fragment, lazy, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // ** Layouts
