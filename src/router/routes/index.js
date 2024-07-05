@@ -372,6 +372,9 @@ const MergeLayoutRoutes = (layout, defaultLayout) => {
       location.replace("/login");
       return;
     }
+    if(location.pathname === "/"){
+      location.replace("/home")
+    }
   }, []);
 
 
